@@ -64,12 +64,3 @@ SolarSystem_Project/
  ┣ renders/
  ┗ README.md
 ```
-
-## 🚀 Future Improvements
-- Asteroid belt  
-- Accurate orbital periods  
-- DOF camera effects  
-- Atmospheric shaders  
-
-## 📜 License
-Educational use only.
