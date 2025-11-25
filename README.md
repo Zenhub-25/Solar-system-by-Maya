@@ -1,92 +1,75 @@
-# 🌌 3D Solar System Animation – Autodesk Maya  
-### Realistic Texturing • HDRI Space • Planet Motion • Arnold Rendering
+# 🌌 3D Solar System Project – Autodesk Maya (Arnold Renderer)
 
----
+A visually realistic **3D Solar System** created in **Autodesk Maya** using **Arnold**, featuring HDRI-based skydome lighting, planet textures, and animation.
 
-## 🚀 Project Overview
+## ✨ Project Overview
+This project demonstrates:
+- Realistic planet textures
+- HDRI lighting via Arnold Skydome
+- Rotational & revolutionary planetary animation
+- Cinematic camera path
+- High‑quality Arnold rendering workflow
 
-This project is a fully modeled, textured, animated, and rendered **3D Solar System**, created in **Autodesk Maya** using **Arnold Renderer**.  
-It includes all eight planets, the Sun with plasma animation, Saturn’s rings, HDRI star environment, and cinematic camera motion.  
-All planet sizes and distances follow the **Roll No. 53 scaling rule**.
-
----
-
-## 🎯 Objective
-
-- Create a realistic Solar System model in Autodesk Maya.  
-- Apply **Roll No. 53** formula for scaling distances and sizes.  
-- Use NASA 8K textures and AiStandardSurface for realism.  
-- Animate:
-  - Planet **rotation**
-  - Planet **revolution**
-  - Sun **plasma motion**
-- Use HDRI lighting for a realistic star universe.  
-- Render a final **1080p cinematic animation** using Arnold.
-
----
+## 🎯 Objectives
+- Create a solar system scene in Maya  
+- Apply PBR textures  
+- Use HDRI for global illumination  
+- Animate rotation & revolution  
+- Produce final rendered output  
 
 ## 🛠️ Toolchain
+- Autodesk Maya  
+- Arnold Renderer  
+- HDRI Maps  
+- Optional: Photoshop/GIMP for texture edits  
+- Optional: After Effects/Premiere for video compile  
 
-| Tool / Resource | Purpose |
-|-----------------|----------|
-| **Autodesk Maya** | Modeling, animation, materials |
-| **Arnold Renderer** | HDRI lighting & rendering |
-| **AiStandardSurface** | Planet & Sun shading |
-| **NASA 8K Textures** | Real planetary surfaces |
-| **EXR HDRI Maps** | Space background & lighting |
-| **Photoshop / GIMP** | Optional texture editing |
-| **DaVinci / Premiere** | Final video assembly |
+## 🌞 Methodology
 
----
+### 1. Scene Setup
+- Create spheres for each planet  
+- Scale proportionally (simplified)  
+- Create emissive Sun shader  
 
-## 🔭 Methodology
+### 2. Apply Textures
+Each planet uses:
+- Albedo map  
+- Roughness/specular map  
+- Normal/bump map  
 
-### 1️⃣ Modeling
-- Created Sun & planets using polygon spheres.  
-- Built Saturn’s ring using a **Torus**.  
-- Organized objects using a clean Outliner structure.  
-- Applied scaling with `53 × multiplier` rule.
+### 3. Lighting (Skydome + HDRI)
+- Create Arnold → Skydome Light  
+- Load HDRI (space environment)  
+- Adjust exposure/intensity  
 
----
+### 4. Animation
+- Planet rotation (self‑spin)  
+- Revolution around Sun using grouped transforms  
 
-### 2️⃣ Texturing & Shading
+### 5. Camera
+- Animate along path or manual keyframing  
 
-**Sun**
-- AiStandardSurface  
-- Emission shader + procedural aiNoise  
-- Animated plasma effect  
+### 6. Rendering
+- Arnold Renderer  
+- EXR/PNG sequence  
+- Samples 3–5  
+- Motion blur ON  
 
-**Planets**
-- Applied **NASA 8K textures**  
-- Controlled roughness + specular  
-- Tilted axis where necessary  
+## 📂 Project Structure
+```
+SolarSystem_Project/
+ ┣ scenes/
+ ┃ ┗ solar_system.mb
+ ┣ textures/
+ ┣ renders/
+ ┗ README.md
+```
 
-**Saturn’s Rings**
-- Torus geometry  
-- Rings PNG with transparency (opacity input)  
+## 🚀 Future Improvements
+- Asteroid belt  
+- Accurate orbital periods  
+- DOF camera effects  
+- Atmospheric shaders  
 
-**Star Background**
-- HDRI Skydome Light  
-- Space EXR map for deep star universe  
-
----
-
-### 3️⃣ Animation
-
-#### 🔄 Planet Rotation (Spin)
-Using Rotate Y animation:
-
-| Planet  | Frames |
-|---------|--------|
-| Mercury | 80     |
-| Venus   | 150    |
-| Earth   | 120    |
-| Mars    | 100    |
-| Jupiter | 70     |
-| Saturn  | 80     |
-| Uranus  | 90     |
-| Neptune | 110    |
-
-#### 🌀 Planet Revolution (Orbit)
-Planets grouped inside a parent node:
-
+## 📜 License
+Educational use only.
